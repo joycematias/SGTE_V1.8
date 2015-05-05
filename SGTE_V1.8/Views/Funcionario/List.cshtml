@@ -1,0 +1,175 @@
+﻿@model IEnumerable<SGTE_V1._8.Models.Tbl_Funcionario>
+
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="container-fluid" id="containerRelatorio">
+    <div class="model-header">
+        <h1>Lista de Funcionarios Cadastrados</h1>
+
+      
+
+        <div class="col-md-3 pull-right">
+            <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+                <input type="text" class="form-control" placeholder="Pesquisar" id="filter" />
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="modal-body">
+            <table class="table table-hover table-condensed" id="tableList">
+                <thead>
+                <th>
+                    @Html.DisplayNameFor(model => model.Funcao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Matricula)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Endereco)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Bairro)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cidade)
+                </th>
+             <!--   <th>
+                    @Html.DisplayNameFor(model => model.CEP)
+                </th>-->
+                <th>
+                    @Html.DisplayNameFor(model => model.Estado)
+                </th>
+                <!-- <th>
+                      @Html.DisplayNameFor(model => model.Tel_Residencial)
+                  </th>-->
+                <th>
+                    @Html.DisplayNameFor(model => model.Tel_Celular)
+                </th>
+               <!-- <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>-->
+                <th>
+                    @Html.DisplayNameFor(model => model.RG)
+                </th>
+                <!--<th>
+                    @Html.DisplayNameFor(model => model.CPF)
+                </th>-->
+                <!--<th>
+                    @Html.DisplayNameFor(model => model.Data_Nasc)
+                </th>-->
+                <th>
+                    @Html.DisplayNameFor(model => model.Sexo)
+                </th>
+                <!--   <th>
+                         @Html.DisplayNameFor(model => model.Ativo)
+                     </th> -->
+                </thead>
+
+                @foreach (var item in Model)
+                {
+                    if (item.Ativo == 1) { 
+                    <tbody class="searchable">
+                    <td>
+                            @Html.DisplayFor(modelItem => item.Funcao)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Matricula)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Endereco)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Bairro)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cidade)
+                        </td>
+                       <!-- <td>
+                            @Html.DisplayFor(modelItem => item.CEP)
+                        </td>-->
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Estado)
+                        </td>
+                        <!-- <td>
+                             @Html.DisplayFor(modelItem => item.Tel_Residencial)
+                         </td>-->
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Tel_Celular)
+                        </td>
+                     <!-- <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>-->  
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RG)
+                        </td>
+                        <!--<td>
+                            @Html.DisplayFor(modelItem => item.CPF)
+                        </td>-->
+                        <!-- <td>
+                             @Html.DisplayFor(modelItem => item.Data_Nasc)
+                         </td>-->
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Sexo)
+                        </td>
+                        <!--  <td>
+                              @Html.DisplayFor(modelItem => item.Ativo)
+                          </td> -->
+                        <td id="botaoLista" class="btn btn-default btn-xs">
+                            @Html.ActionLink("Editar", "Edit", new { id = item.ID }) |
+                            @Html.ActionLink("Detalhes", "Details", new { id = item.ID }) |
+                            @Html.ActionLink("Deletar", "Delete", new { id = item.ID })
+                        </td>
+                    </tbody>
+                   
+                }
+                }
+
+            </table>
+        </div>
+    </div>
+
+</div>
+<div class="col-md-1" id="voltarBotao">
+    @Html.ActionLink("Voltar ", "Index", "Funcionario", null, new { @class = "btn btn-sample2" })
+</div>
+
+
+<div class="col-md-offset-11">
+    @Html.ActionLink("Cadastrar Novo", "Create", null, new { @class = "btn btn-sample" })
+</div>
+<br>
+<br>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    $(function(){
+        $('#filter').keyup(function () {
+
+            var rex = new RegExp($(this).val(), 'i');
+            $('.searchable tr').hide();
+            $('.searchable tr').filter(function () {
+                return rex.test($(this).text());
+            }).show();
+        });
+    });
+</script>
+

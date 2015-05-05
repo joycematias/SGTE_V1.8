@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SGTE2ModelStoreContainer" CdmEntityContainer="SGTE2Entities">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="SGTE2Model.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Aluno">
+      <EntityTypeMapping TypeName="SGTE2Model.Tbl_Aluno">
+        <MappingFragment StoreEntitySet="Tbl_Aluno">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="RG" ColumnName="RG" />
+          <ScalarProperty Name="Escola" ColumnName="Escola" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Endereco_1" ColumnName="Endereco_1" />
+          <ScalarProperty Name="Endereco_2" ColumnName="Endereco_2" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+          <ScalarProperty Name="Cliente_ID" ColumnName="Cliente_ID" />
+          <ScalarProperty Name="Veiculo_ID" ColumnName="Veiculo_ID" />
+          <ScalarProperty Name="Escola_ID" ColumnName="Escola_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Cliente">
+      <EntityTypeMapping TypeName="SGTE2Model.Tbl_Cliente">
+        <MappingFragment StoreEntitySet="Tbl_Cliente">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+          <ScalarProperty Name="Data_Nasc" ColumnName="Data_Nasc" />
+          <ScalarProperty Name="RG" ColumnName="RG" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Endereco">
+      <EntityTypeMapping TypeName="SGTE2Model.Tbl_Endereco">
+        <MappingFragment StoreEntitySet="Tbl_Endereco">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="End_Embarque" ColumnName="End_Embarque" />
+          <ScalarProperty Name="End_Desembarque" ColumnName="End_Desembarque" />
+          <ScalarProperty Name="Viagem_ID" ColumnName="Viagem_ID" />
+          <ScalarProperty Name="Aluno_ID" ColumnName="Aluno_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Escola">
+      <EntityTypeMapping TypeName="SGTE2Model.Tbl_Escola">
+        <MappingFragment StoreEntitySet="Tbl_Escola">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="CNPJ" ColumnName="CNPJ" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Funcionario">
+      <EntityTypeMapping TypeName="SGTE2Model.Tbl_Funcionario">
+        <MappingFragment StoreEntitySet="Tbl_Funcionario">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Funcao" ColumnName="Funcao" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Tel_Residencial" ColumnName="Tel_Residencial" />
+          <ScalarProperty Name="Tel_Celular" ColumnName="Tel_Celular" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="RG" ColumnName="RG" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="Data_Nasc" ColumnName="Data_Nasc" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Hora_Viagem">
+      <EntityTypeMapping TypeName="SGTE2Model.Tbl_Hora_Viagem">
+        <MappingFragment StoreEntitySet="Tbl_Hora_Viagem">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="HoraReal_Embarque" ColumnName="HoraReal_Embarque" />
+          <ScalarProperty Name="HoraReal_Desembarque" ColumnName="HoraReal_Desembarque" />
+          <ScalarProperty Name="HoraPrev_Embarque" ColumnName="HoraPrev_Embarque" />
+          <ScalarProperty Name="HoraPrev_Desembarque" ColumnName="HoraPrev_Desembarque" />
+          <ScalarProperty Name="Viagem_ID" ColumnName="Viagem_ID" />
+          <ScalarProperty Name="Aluno_ID" ColumnName="Aluno_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Login">
+      <EntityTypeMapping TypeName="SGTE2Model.Tbl_Login">
+        <MappingFragment StoreEntitySet="Tbl_Login">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Senha" ColumnName="Senha" />
+          <ScalarProperty Name="Nivel_Acesso" ColumnName="Nivel_Acesso" />
+          <ScalarProperty Name="Cliente_ID" ColumnName="Cliente_ID" />
+          <ScalarProperty Name="Funcionario_ID" ColumnName="Funcionario_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Motorista">
+      <EntityTypeMapping TypeName="SGTE2Model.Tbl_Motorista">
+        <MappingFragment StoreEntitySet="Tbl_Motorista">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="CNH" ColumnName="CNH" />
+          <ScalarProperty Name="Funcionario_ID" ColumnName="Funcionario_ID" />
+          <ScalarProperty Name="Veiculo_ID" ColumnName="Veiculo_ID" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Passageiro_Viagem">
+      <EntityTypeMapping TypeName="SGTE2Model.Tbl_Passageiro_Viagem">
+        <MappingFragment StoreEntitySet="Tbl_Passageiro_Viagem">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Passageiros" ColumnName="Passageiros" />
+          <ScalarProperty Name="Obs_Viagem" ColumnName="Obs_Viagem" />
+          <ScalarProperty Name="Viagem_ID" ColumnName="Viagem_ID" />
+          <ScalarProperty Name="Aluno_ID" ColumnName="Aluno_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Veiculo">
+      <EntityTypeMapping TypeName="SGTE2Model.Tbl_Veiculo">
+        <MappingFragment StoreEntitySet="Tbl_Veiculo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Cod_Veiculo" ColumnName="Cod_Veiculo" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="Renavam" ColumnName="Renavam" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="Licenca" ColumnName="Licenca" />
+          <ScalarProperty Name="Chassi" ColumnName="Chassi" />
+          <ScalarProperty Name="Ano_Fabricacao" ColumnName="Ano_Fabricacao" />
+          <ScalarProperty Name="Num_Lugares" ColumnName="Num_Lugares" />
+          <ScalarProperty Name="Lugares_Vagos" ColumnName="Lugares_Vagos" />
+          <ScalarProperty Name="UF" ColumnName="UF" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Escola_ID" ColumnName="Escola_ID" />
+          <ScalarProperty Name="Motorista_ID" ColumnName="Motorista_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Viagem">
+      <EntityTypeMapping TypeName="SGTE2Model.Tbl_Viagem">
+        <MappingFragment StoreEntitySet="Tbl_Viagem">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Motorista" ColumnName="Motorista" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Obs_Viagem" ColumnName="Obs_Viagem" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Aluno_ID" ColumnName="Aluno_ID" />
+          <ScalarProperty Name="Escola_ID" ColumnName="Escola_ID" />
+          <ScalarProperty Name="Veiculo_ID" ColumnName="Veiculo_ID" />
+          <ScalarProperty Name="Motorista_ID" ColumnName="Motorista_ID" />
+          <ScalarProperty Name="Passageiro_ID" ColumnName="Passageiro_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="SGTE2Model.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="SGTE2Model.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="SGTE2Model.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="SGTE2Model.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SGTE2Model.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="SGTE2Model.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SGTE2Model.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="SGTE2Model.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="SGTE2Model.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="stp_BuscarFuncionario" FunctionName="SGTE2Model.Store.stp_BuscarFuncionario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SGTE2Model.stp_BuscarFuncionario_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Funcao" ColumnName="Funcao" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Tel_Residencial" ColumnName="Tel_Residencial" />
+          <ScalarProperty Name="Tel_Celular" ColumnName="Tel_Celular" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="RG" ColumnName="RG" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="Data_Nasc" ColumnName="Data_Nasc" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="stp_CadastroAluno" FunctionName="SGTE2Model.Store.stp_CadastroAluno" />
+    <FunctionImportMapping FunctionImportName="stp_CadastroCliente" FunctionName="SGTE2Model.Store.stp_CadastroCliente" />
+    <FunctionImportMapping FunctionImportName="stp_CadastroFuncionario" FunctionName="SGTE2Model.Store.stp_CadastroFuncionario" />
+    <FunctionImportMapping FunctionImportName="stp_DesativarFuncionario" FunctionName="SGTE2Model.Store.stp_DesativarFuncionario" />
+    <FunctionImportMapping FunctionImportName="stp_IncluirAlunoVeiculo" FunctionName="SGTE2Model.Store.stp_IncluirAlunoVeiculo" />
+    <FunctionImportMapping FunctionImportName="stp_ListarAluno" FunctionName="SGTE2Model.Store.stp_ListarAluno">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SGTE2Model.stp_ListarAluno_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="RG" ColumnName="RG" />
+          <ScalarProperty Name="Escola" ColumnName="Escola" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Endereco_1" ColumnName="Endereco_1" />
+          <ScalarProperty Name="Endereco_2" ColumnName="Endereco_2" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+          <ScalarProperty Name="Cliente_ID" ColumnName="Cliente_ID" />
+          <ScalarProperty Name="Veiculo_ID" ColumnName="Veiculo_ID" />
+          <ScalarProperty Name="Escola_ID" ColumnName="Escola_ID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="stp_ListarCliente" FunctionName="SGTE2Model.Store.stp_ListarCliente">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SGTE2Model.stp_ListarCliente_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+          <ScalarProperty Name="Data_Nasc" ColumnName="Data_Nasc" />
+          <ScalarProperty Name="RG" ColumnName="RG" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="stp_ListarFuncionario" FunctionName="SGTE2Model.Store.stp_ListarFuncionario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SGTE2Model.stp_ListarFuncionario_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Funcao" ColumnName="Funcao" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Tel_Residencial" ColumnName="Tel_Residencial" />
+          <ScalarProperty Name="Tel_Celular" ColumnName="Tel_Celular" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="RG" ColumnName="RG" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="Data_Nasc" ColumnName="Data_Nasc" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="stp_MudarAlunoVeiculo" FunctionName="SGTE2Model.Store.stp_MudarAlunoVeiculo" />
+    <FunctionImportMapping FunctionImportName="stp_SelecionaAluno" FunctionName="SGTE2Model.Store.stp_SelecionaAluno">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SGTE2Model.stp_SelecionaAluno_Result">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="RG" ColumnName="RG" />
+          <ScalarProperty Name="Escola" ColumnName="Escola" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="stp_SelecionaViagem" FunctionName="SGTE2Model.Store.stp_SelecionaViagem">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SGTE2Model.stp_SelecionaViagem_Result">
+          <ScalarProperty Name="Passageiros" ColumnName="Passageiros" />
+          <ScalarProperty Name="Escola" ColumnName="Escola" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Motorista" ColumnName="Motorista" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Horario_Embarque" ColumnName="Horario_Embarque" />
+          <ScalarProperty Name="Horario_Desembarque" ColumnName="Horario_Desembarque" />
+          <ScalarProperty Name="Embarque" ColumnName="Embarque" />
+          <ScalarProperty Name="Desemberque" ColumnName="Desemberque" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="stp_ValidaUsuario" FunctionName="SGTE2Model.Store.stp_ValidaUsuario" />
+    <FunctionImportMapping FunctionImportName="ListarAlunos" FunctionName="SGTE2Model.Store.stp_ListarAluno" />
+    <FunctionImportMapping FunctionImportName="stp_RelacaoAlunoVeiculo" FunctionName="SGTE2Model.Store.stp_RelacaoAlunoVeiculo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SGTE2Model.stp_RelacaoAlunoVeiculo_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="RG" ColumnName="RG" />
+          <ScalarProperty Name="Escola" ColumnName="Escola" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Endereco_1" ColumnName="Endereco_1" />
+          <ScalarProperty Name="Endereco_2" ColumnName="Endereco_2" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+          <ScalarProperty Name="Cliente_ID" ColumnName="Cliente_ID" />
+          <ScalarProperty Name="Veiculo_ID" ColumnName="Veiculo_ID" />
+          <ScalarProperty Name="Escola_ID" ColumnName="Escola_ID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="RelacaoAlunoVeiculo" FunctionName="SGTE2Model.Store.stp_RelacaoAlunoVeiculo" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,124 @@
+﻿@model SGTE_V1._8.Models.Tbl_Aluno
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tbl_Aluno</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Escola)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Escola)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bairro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bairro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CEP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CEP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Endereco_1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Endereco_1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Endereco_2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Endereco_2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ativo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ativo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tbl_Cliente.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tbl_Cliente.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tbl_Escola.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tbl_Escola.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tbl_Veiculo.Placa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tbl_Veiculo.Placa)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("listar alunos", "ListaAlunosVeiculo", new { id = Model.ID }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

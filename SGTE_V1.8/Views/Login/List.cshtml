@@ -1,0 +1,58 @@
+﻿@model IEnumerable<SGTE_V1._6.Models.Tbl_Login>
+
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Login)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Senha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nivel_Acesso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tbl_Cliente.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tbl_Funcionario.Funcao)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Login)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Senha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nivel_Acesso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tbl_Cliente.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tbl_Funcionario.Funcao)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

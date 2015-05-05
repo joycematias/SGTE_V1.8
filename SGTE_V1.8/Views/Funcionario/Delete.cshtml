@@ -1,0 +1,163 @@
+﻿@model SGTE_V1._8.Models.Tbl_Funcionario
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br>
+<div class="col-md-1" id="voltarBotao">
+    @Html.ActionLink("Back to List", "List", null, new { @class = "btn btn-sample2" })
+</div>
+
+
+<div class="col-lg-offset-1" id="containerDelete">
+    <h1>Delete Funcionario</h1>
+    <div class="col-lg-offset-1">
+        <h2>Você quer deletar isso mesmo ?</h2>
+        <hr />
+        <dl class="dl-horizontal" id="dlcancela">
+            <dt>
+                @Html.DisplayNameFor(model => model.Funcao)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Funcao)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Matricula)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Matricula)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Nome)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Nome)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Endereco)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Endereco)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Bairro)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Bairro)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Cidade)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Cidade)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CEP)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CEP)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Estado)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Estado)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Tel_Residencial)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Tel_Residencial)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Tel_Celular)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Tel_Celular)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.RG)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.RG)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CPF)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CPF)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Data_Nasc)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Data_Nasc)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Sexo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Sexo)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Ativo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Ativo)
+            </dd>
+
+        </dl>
+
+    </div>
+    <br>
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="col-md-offset-5">
+            @Html.ActionLink("Cancelar", "List", null, new { @class = "btn btn-default" })
+            <input type="submit" value="Delete" class="btn btn-danger" />
+        </div>
+    }
+</div>

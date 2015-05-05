@@ -1,0 +1,168 @@
+﻿@model IEnumerable<SGTE_V1._8.Models.Tbl_Cliente>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+
+
+    <br />
+    <br />
+    <br />
+
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <div class="container-fluid" id="IndexFunc">
+                    <h4 id="datas" class="pull-right"> </h4>
+                    <script>
+                        var d = new Date();
+                        document.getElementById("datas").innerHTML = d.toDateString();
+
+                    </script>
+                    <br>
+                    <br>
+                    <h1>
+                        SGTE - Sistema de Gerenciamento de Transporte Escolar.
+                    </h1>
+
+
+                    <br>
+                    <h3>
+                        O que deseja fazer?
+                        Selecione uma das ferramentas abaixo.
+                    </h3>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+
+
+
+        <center>
+            <div class="container">
+                <section>
+
+
+                    <div class="container" style="margin-top: 100px; margin-bottom: 100px;">
+
+
+                        <div class="row">
+                            <div class="row step">
+
+                                <a href="/Cliente/Consultas">
+                                    <div id="div1" class="col-md-2" onclick="javascript: resetActive(event);">
+                                        <span class="glyphicon glyphicon-user"></span>
+                                        <p>Realizar   Consultas</p>
+                                    </div>
+                                </a>
+
+                                <a href="/Cliente/Eventualidade">
+                                    <div class="col-md-2" onclick="javascript: resetActive(event);">
+                                        <span class="glyphicon glyphicon-search"></span>
+                                        <p>Informar eventualidade</p>
+                                    </div>
+                                </a>
+                                                                                            
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+            </div>
+        </center>
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+<style>
+    .step {
+        text-align: center;
+    }
+
+        .step .col-md-2 {
+            background-color: #fff;
+            border: 1px solid #C0C0C0;
+            border-right: none;
+        }
+
+            .step .col-md-2:last-child {
+                border: 1px solid #C0C0C0;
+            }
+
+            .step .col-md-2:first-child {
+                border-radius: 5px 0 0 5px;
+            }
+
+            .step .col-md-2:last-child {
+                border-radius: 0 5px 5px 0;
+            }
+
+            .step .col-md-2:hover {
+                color: #F58723;
+                cursor: pointer;
+            }
+
+        .step .activestep {
+            color: #F58723;
+            height: 100px;
+            margin-top: -7px;
+            padding-top: 7px;
+            border-left: 6px solid #5CB85C !important;
+            border-right: 6px solid #5CB85C !important;
+            border-top: 3px solid #5CB85C !important;
+            border-bottom: 3px solid #5CB85C !important;
+            vertical-align: central;
+        }
+
+        .step .fa {
+            padding-top: 15px;
+            font-size: 40px;
+        }
+</style>
+
+<script type="text/javascript">
+    function resetActive(event) {
+        $("div").each(function () {
+            if ($(this).hasClass("activestep")) {
+                $(this).removeClass("activestep");
+            }
+        });
+
+        if (event.target.className == "col-md-2") {
+            $(event.target).addClass("activestep");
+        }
+        else {
+            $(event.target.parentNode).addClass("activestep");
+        }
+    }
+</script>

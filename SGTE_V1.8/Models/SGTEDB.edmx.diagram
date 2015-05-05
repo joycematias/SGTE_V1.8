@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f0c04fdeae234dbaa44e84109fe6b32e" Name="Diagram1">
+        <EntityTypeShape EntityType="SGTE2Model.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGTE2Model.Tbl_Aluno" Width="1.5" PointX="5.25" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGTE2Model.Tbl_Cliente" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGTE2Model.Tbl_Endereco" Width="1.5" PointX="7.5" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGTE2Model.Tbl_Escola" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGTE2Model.Tbl_Funcionario" Width="1.5" PointX="3" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGTE2Model.Tbl_Hora_Viagem" Width="1.5" PointX="10.5" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGTE2Model.Tbl_Login" Width="1.5" PointX="8.25" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGTE2Model.Tbl_Motorista" Width="1.5" PointX="5.25" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGTE2Model.Tbl_Passageiro_Viagem" Width="1.5" PointX="7.5" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGTE2Model.Tbl_Veiculo" Width="1.5" PointX="3" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGTE2Model.Tbl_Viagem" Width="1.5" PointX="12.75" PointY="12.25" IsExpanded="true" />
+        <AssociationConnector Association="SGTE2Model.FK__Tbl_Aluno__Clien__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="SGTE2Model.FK__Tbl_Aluno__Escol__6754599E" ManuallyRouted="false" />
+        <AssociationConnector Association="SGTE2Model.FK__Tbl_Aluno__Veicu__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="SGTE2Model.FK__Tbl_Ender__Aluno__6477ECF3" ManuallyRouted="false" />
+        <AssociationConnector Association="SGTE2Model.FK__Tbl_Hora___Aluno__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="SGTE2Model.FK__Tbl_Passa__Aluno__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="SGTE2Model.FK__Tbl_Viage__Aluno__656C112C" ManuallyRouted="false" />
+        <AssociationConnector Association="SGTE2Model.FK__Tbl_Login__Clien__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="SGTE2Model.FK__Tbl_Ender__Viage__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="SGTE2Model.FK__Tbl_Veicu__Escol__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="SGTE2Model.FK__Tbl_Viage__Escol__66603565" ManuallyRouted="false" />
+        <AssociationConnector Association="SGTE2Model.FK__Tbl_Login__Funci__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="SGTE2Model.FK__Tbl_Motor__Funci__20C1E124" ManuallyRouted="false" />
+        <AssociationConnector Association="SGTE2Model.FK__Tbl_Hora___Viage__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="SGTE2Model.FK__Tbl_Motor__Veicu__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="SGTE2Model.FK__Tbl_Viage__Motor__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="SGTE2Model.FK__Tbl_Passa__Viage__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="SGTE2Model.FK__Tbl_Viage__Passa__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="SGTE2Model.FK__Tbl_Veicu__Motor__628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="SGTE2Model.FK__Tbl_Viage__Veicu__3A81B327" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

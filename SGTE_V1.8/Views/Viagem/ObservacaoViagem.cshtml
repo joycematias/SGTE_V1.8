@@ -1,0 +1,83 @@
+﻿@model IEnumerable<SGTE_V1._8.Models.Tbl_Viagem>
+
+@{
+    ViewBag.Title = "ObservacaoViagem";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ObservacaoViagem</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <!--<th>
+            @Html.DisplayNameFor(model => model.Motorista)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data)
+        </th>-->
+        <th>
+            @Html.DisplayNameFor(model => model.Obs_Viagem)
+        </th>
+        <!--<th>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tbl_Aluno.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tbl_Escola.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tbl_Motorista.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tbl_Passageiro_Viagem1.Passageiros)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tbl_Veiculo.Placa)
+        </th>-->
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+       <!-- <td>
+            @Html.DisplayFor(modelItem => item.Motorista)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data)
+        </td>-->
+        <td>
+            @Html.DisplayFor(modelItem => item.Obs_Viagem)
+        </td>
+        <!--<td>
+            @Html.DisplayFor(modelItem => item.Tipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tbl_Aluno.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tbl_Escola.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tbl_Motorista.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tbl_Passageiro_Viagem1.Passageiros)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tbl_Veiculo.Placa)
+        </td>-->
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            
+        </td>
+    </tr>
+}
+
+</table>

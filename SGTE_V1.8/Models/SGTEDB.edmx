@@ -1,0 +1,1837 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SGTE2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Tbl_Aluno">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="RG" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="Escola" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="Cidade" Type="varchar" MaxLength="40" />
+          <Property Name="Bairro" Type="varchar" MaxLength="40" />
+          <Property Name="CEP" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Estado" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="Endereco_1" Type="varchar" MaxLength="240" Nullable="false" />
+          <Property Name="Endereco_2" Type="varchar" MaxLength="240" Nullable="false" />
+          <Property Name="Ativo" Type="int" />
+          <Property Name="Cliente_ID" Type="int" />
+          <Property Name="Veiculo_ID" Type="int" />
+          <Property Name="Escola_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="Tbl_Cliente">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="Cidade" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="Bairro" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="Endereco" Type="varchar" MaxLength="240" Nullable="false" />
+          <Property Name="Estado" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="CEP" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Data_Nasc" Type="datetime" Nullable="false" />
+          <Property Name="RG" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="CPF" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="Telefone" Type="varchar" MaxLength="80" />
+          <Property Name="Celular" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="80" />
+          <Property Name="Ativo" Type="int" />
+        </EntityType>
+        <EntityType Name="Tbl_Endereco">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="End_Embarque" Type="varchar" MaxLength="240" Nullable="false" />
+          <Property Name="End_Desembarque" Type="varchar" MaxLength="240" Nullable="false" />
+          <Property Name="Viagem_ID" Type="int" />
+          <Property Name="Aluno_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="Tbl_Escola">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="Endereco" Type="varchar" MaxLength="240" Nullable="false" />
+          <Property Name="Cidade" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="Bairro" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="CEP" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Estado" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="CNPJ" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="Ativo" Type="int" />
+        </EntityType>
+        <EntityType Name="Tbl_Funcionario">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Funcao" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="Matricula" Type="int" Nullable="false" />
+          <Property Name="Nome" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="Endereco" Type="varchar" MaxLength="240" Nullable="false" />
+          <Property Name="Bairro" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="Cidade" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="CEP" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Estado" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="Tel_Residencial" Type="varchar" MaxLength="80" />
+          <Property Name="Tel_Celular" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="RG" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="CPF" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="Data_Nasc" Type="datetime" Nullable="false" />
+          <Property Name="Sexo" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="Ativo" Type="int" />
+        </EntityType>
+        <EntityType Name="Tbl_Hora_Viagem">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Data" Type="datetime" />
+          <Property Name="HoraReal_Embarque" Type="varchar" MaxLength="5" />
+          <Property Name="HoraReal_Desembarque" Type="varchar" MaxLength="5" />
+          <Property Name="HoraPrev_Embarque" Type="varchar" MaxLength="5" />
+          <Property Name="HoraPrev_Desembarque" Type="varchar" MaxLength="5" />
+          <Property Name="Viagem_ID" Type="int" />
+          <Property Name="Aluno_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="Tbl_Login">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Login" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="Senha" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="Nivel_Acesso" Type="int" />
+          <Property Name="Cliente_ID" Type="int" />
+          <Property Name="Funcionario_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="Tbl_Motorista">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="CNH" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="Funcionario_ID" Type="int" />
+          <Property Name="Veiculo_ID" Type="int" />
+          <Property Name="Ativo" Type="int" />
+        </EntityType>
+        <EntityType Name="Tbl_Passageiro_Viagem">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Passageiros" Type="varchar" MaxLength="80" />
+          <Property Name="Obs_Viagem" Type="varchar" MaxLength="240" />
+          <Property Name="Viagem_ID" Type="int" />
+          <Property Name="Aluno_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="Tbl_Veiculo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Cod_Veiculo" Type="int" Nullable="false" />
+          <Property Name="Placa" Type="varchar" MaxLength="7" Nullable="false" />
+          <Property Name="Modelo" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="Renavam" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="Cidade" Type="varchar" MaxLength="80" />
+          <Property Name="Licenca" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="Chassi" Type="varchar" MaxLength="17" Nullable="false" />
+          <Property Name="Ano_Fabricacao" Type="varchar" MaxLength="4" />
+          <Property Name="Num_Lugares" Type="int" Nullable="false" />
+          <Property Name="Lugares_Vagos" Type="int" Nullable="false" />
+          <Property Name="UF" Type="varchar" MaxLength="2" />
+          <Property Name="Ativo" Type="int" />
+          <Property Name="Status" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="Escola_ID" Type="int" />
+          <Property Name="Motorista_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="Tbl_Viagem">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Motorista" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="Data" Type="datetime" />
+          <Property Name="Obs_Viagem" Type="varchar" MaxLength="240" />
+          <Property Name="Tipo" Type="varchar" MaxLength="80" />
+          <Property Name="Aluno_ID" Type="int" />
+          <Property Name="Escola_ID" Type="int" />
+          <Property Name="Veiculo_ID" Type="int" />
+          <Property Name="Motorista_ID" Type="int" />
+          <Property Name="Passageiro_ID" Type="int" />
+        </EntityType>
+        <Association Name="FK__Tbl_Aluno__Clien__440B1D61">
+          <End Role="Tbl_Cliente" Type="Self.Tbl_Cliente" Multiplicity="0..1" />
+          <End Role="Tbl_Aluno" Type="Self.Tbl_Aluno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Cliente">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Aluno">
+              <PropertyRef Name="Cliente_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Aluno__Escol__6754599E">
+          <End Role="Tbl_Escola" Type="Self.Tbl_Escola" Multiplicity="0..1" />
+          <End Role="Tbl_Aluno" Type="Self.Tbl_Aluno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Escola">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Aluno">
+              <PropertyRef Name="Escola_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Aluno__Veicu__44FF419A">
+          <End Role="Tbl_Veiculo" Type="Self.Tbl_Veiculo" Multiplicity="0..1" />
+          <End Role="Tbl_Aluno" Type="Self.Tbl_Aluno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Veiculo">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Aluno">
+              <PropertyRef Name="Veiculo_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Ender__Aluno__6477ECF3">
+          <End Role="Tbl_Aluno" Type="Self.Tbl_Aluno" Multiplicity="0..1" />
+          <End Role="Tbl_Endereco" Type="Self.Tbl_Endereco" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Aluno">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Endereco">
+              <PropertyRef Name="Aluno_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Ender__Viage__6383C8BA">
+          <End Role="Tbl_Viagem" Type="Self.Tbl_Viagem" Multiplicity="0..1" />
+          <End Role="Tbl_Endereco" Type="Self.Tbl_Endereco" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Viagem">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Endereco">
+              <PropertyRef Name="Viagem_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Hora___Aluno__5DCAEF64">
+          <End Role="Tbl_Aluno" Type="Self.Tbl_Aluno" Multiplicity="0..1" />
+          <End Role="Tbl_Hora_Viagem" Type="Self.Tbl_Hora_Viagem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Aluno">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Hora_Viagem">
+              <PropertyRef Name="Aluno_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Hora___Viage__5CD6CB2B">
+          <End Role="Tbl_Viagem" Type="Self.Tbl_Viagem" Multiplicity="0..1" />
+          <End Role="Tbl_Hora_Viagem" Type="Self.Tbl_Hora_Viagem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Viagem">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Hora_Viagem">
+              <PropertyRef Name="Viagem_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Login__Clien__571DF1D5">
+          <End Role="Tbl_Cliente" Type="Self.Tbl_Cliente" Multiplicity="0..1" />
+          <End Role="Tbl_Login" Type="Self.Tbl_Login" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Cliente">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Login">
+              <PropertyRef Name="Cliente_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Login__Funci__5812160E">
+          <End Role="Tbl_Funcionario" Type="Self.Tbl_Funcionario" Multiplicity="0..1" />
+          <End Role="Tbl_Login" Type="Self.Tbl_Login" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Funcionario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Login">
+              <PropertyRef Name="Funcionario_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Motor__Funci__20C1E124">
+          <End Role="Tbl_Funcionario" Type="Self.Tbl_Funcionario" Multiplicity="0..1" />
+          <End Role="Tbl_Motorista" Type="Self.Tbl_Motorista" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Funcionario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Motorista">
+              <PropertyRef Name="Funcionario_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Motor__Veicu__60A75C0F">
+          <End Role="Tbl_Veiculo" Type="Self.Tbl_Veiculo" Multiplicity="0..1" />
+          <End Role="Tbl_Motorista" Type="Self.Tbl_Motorista" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Veiculo">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Motorista">
+              <PropertyRef Name="Veiculo_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Passa__Aluno__5FB337D6">
+          <End Role="Tbl_Aluno" Type="Self.Tbl_Aluno" Multiplicity="0..1" />
+          <End Role="Tbl_Passageiro_Viagem" Type="Self.Tbl_Passageiro_Viagem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Aluno">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Passageiro_Viagem">
+              <PropertyRef Name="Aluno_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Passa__Viage__5EBF139D">
+          <End Role="Tbl_Viagem" Type="Self.Tbl_Viagem" Multiplicity="0..1" />
+          <End Role="Tbl_Passageiro_Viagem" Type="Self.Tbl_Passageiro_Viagem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Viagem">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Passageiro_Viagem">
+              <PropertyRef Name="Viagem_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Veicu__Escol__619B8048">
+          <End Role="Tbl_Escola" Type="Self.Tbl_Escola" Multiplicity="0..1" />
+          <End Role="Tbl_Veiculo" Type="Self.Tbl_Veiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Escola">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Veiculo">
+              <PropertyRef Name="Escola_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Veicu__Motor__628FA481">
+          <End Role="Tbl_Veiculo" Type="Self.Tbl_Veiculo" Multiplicity="0..1" />
+          <End Role="Tbl_Veiculo1" Type="Self.Tbl_Veiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Veiculo">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Veiculo1">
+              <PropertyRef Name="Motorista_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Viage__Aluno__656C112C">
+          <End Role="Tbl_Aluno" Type="Self.Tbl_Aluno" Multiplicity="0..1" />
+          <End Role="Tbl_Viagem" Type="Self.Tbl_Viagem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Aluno">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Viagem">
+              <PropertyRef Name="Aluno_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Viage__Escol__66603565">
+          <End Role="Tbl_Escola" Type="Self.Tbl_Escola" Multiplicity="0..1" />
+          <End Role="Tbl_Viagem" Type="Self.Tbl_Viagem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Escola">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Viagem">
+              <PropertyRef Name="Escola_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Viage__Motor__3B75D760">
+          <End Role="Tbl_Motorista" Type="Self.Tbl_Motorista" Multiplicity="0..1" />
+          <End Role="Tbl_Viagem" Type="Self.Tbl_Viagem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Motorista">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Viagem">
+              <PropertyRef Name="Motorista_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Viage__Passa__398D8EEE">
+          <End Role="Tbl_Passageiro_Viagem" Type="Self.Tbl_Passageiro_Viagem" Multiplicity="0..1" />
+          <End Role="Tbl_Viagem" Type="Self.Tbl_Viagem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Passageiro_Viagem">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Viagem">
+              <PropertyRef Name="Passageiro_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Viage__Veicu__3A81B327">
+          <End Role="Tbl_Veiculo" Type="Self.Tbl_Veiculo" Multiplicity="0..1" />
+          <End Role="Tbl_Viagem" Type="Self.Tbl_Viagem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Veiculo">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Viagem">
+              <PropertyRef Name="Veiculo_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="stp_BuscarFuncionario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cpf" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="stp_CadastroAluno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Cliente_ID" Type="int" Mode="In" />
+          <Parameter Name="NomeCliente" Type="varchar" Mode="In" />
+          <Parameter Name="Nome" Type="varchar" Mode="In" />
+          <Parameter Name="Endereço_1" Type="varchar" Mode="In" />
+          <Parameter Name="Endereco_2" Type="varchar" Mode="In" />
+          <Parameter Name="RG" Type="varchar" Mode="In" />
+          <Parameter Name="Escola" Type="varchar" Mode="In" />
+          <Parameter Name="EscolaID" Type="int" Mode="In" />
+          <Parameter Name="Matricula" Type="int" Mode="In" />
+          <Parameter Name="Mensagem" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="stp_CadastroCliente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="int" Mode="In" />
+          <Parameter Name="Nome" Type="varchar" Mode="In" />
+          <Parameter Name="Endereco" Type="varchar" Mode="In" />
+          <Parameter Name="Bairro" Type="varchar" Mode="In" />
+          <Parameter Name="Cidade" Type="varchar" Mode="In" />
+          <Parameter Name="CEP" Type="varchar" Mode="In" />
+          <Parameter Name="Estado" Type="varchar" Mode="In" />
+          <Parameter Name="Celular" Type="varchar" Mode="In" />
+          <Parameter Name="Telefone" Type="varchar" Mode="In" />
+          <Parameter Name="Email" Type="varchar" Mode="In" />
+          <Parameter Name="RG" Type="varchar" Mode="In" />
+          <Parameter Name="CPF" Type="varchar" Mode="In" />
+          <Parameter Name="Data_Nasc" Type="datetime" Mode="In" />
+          <Parameter Name="Matricula" Type="int" Mode="In" />
+          <Parameter Name="Mensagem" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="stp_CadastroFuncionario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="int" Mode="In" />
+          <Parameter Name="Funcao" Type="varchar" Mode="In" />
+          <Parameter Name="Matricula" Type="int" Mode="In" />
+          <Parameter Name="Nome" Type="varchar" Mode="In" />
+          <Parameter Name="Endereco" Type="varchar" Mode="In" />
+          <Parameter Name="Bairro" Type="varchar" Mode="In" />
+          <Parameter Name="Cidade" Type="varchar" Mode="In" />
+          <Parameter Name="CEP" Type="varchar" Mode="In" />
+          <Parameter Name="Estado" Type="varchar" Mode="In" />
+          <Parameter Name="Tel_Residencial" Type="varchar" Mode="In" />
+          <Parameter Name="Tel_Celular" Type="varchar" Mode="In" />
+          <Parameter Name="Email" Type="varchar" Mode="In" />
+          <Parameter Name="RG" Type="varchar" Mode="In" />
+          <Parameter Name="CPF" Type="varchar" Mode="In" />
+          <Parameter Name="Data_Nasc" Type="datetime" Mode="In" />
+          <Parameter Name="Sexo" Type="varchar" Mode="In" />
+          <Parameter Name="NivelAcesso" Type="int" Mode="In" />
+          <Parameter Name="Nivel" Type="int" Mode="In" />
+          <Parameter Name="Mensagem" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="stp_DesativarFuncionario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cpf" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="stp_IncluirAlunoVeiculo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Aluno_ID" Type="int" Mode="In" />
+          <Parameter Name="NomeAluno" Type="varchar" Mode="In" />
+          <Parameter Name="Placa" Type="varchar" Mode="In" />
+          <Parameter Name="Veiculo_ID" Type="int" Mode="In" />
+          <Parameter Name="NivelAcesso" Type="int" Mode="In" />
+          <Parameter Name="Matricula" Type="int" Mode="In" />
+        </Function>
+        <Function Name="stp_ListarAluno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="stp_ListarCliente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="stp_ListarFuncionario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="stp_MudarAlunoVeiculo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Aluno_ID" Type="int" Mode="In" />
+          <Parameter Name="NomeAluno" Type="varchar" Mode="In" />
+          <Parameter Name="PlacaNova" Type="varchar" Mode="In" />
+          <Parameter Name="Veiculo_ID_Atual" Type="int" Mode="In" />
+          <Parameter Name="Veiculo_ID_Novo" Type="int" Mode="In" />
+          <Parameter Name="NivelAcesso" Type="int" Mode="In" />
+          <Parameter Name="Matricula" Type="int" Mode="In" />
+        </Function>
+        <Function Name="stp_RelacaoAlunoVeiculo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Veiculo_ID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="stp_SelecionaAluno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="int" Mode="In" />
+          <Parameter Name="NivelAcesso" Type="int" Mode="In" />
+          <Parameter Name="Mensagem" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="stp_SelecionaViagem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nome" Type="varchar" Mode="In" />
+          <Parameter Name="data" Type="date" Mode="In" />
+          <Parameter Name="data2" Type="date" Mode="In" />
+          <Parameter Name="ID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="stp_ValidaUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Login" Type="varchar" Mode="In" />
+          <Parameter Name="Senha" Type="varchar" Mode="In" />
+          <Parameter Name="Mensagem" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="SGTE2ModelStoreContainer">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Aluno" EntityType="Self.Tbl_Aluno" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Cliente" EntityType="Self.Tbl_Cliente" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Endereco" EntityType="Self.Tbl_Endereco" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Escola" EntityType="Self.Tbl_Escola" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Funcionario" EntityType="Self.Tbl_Funcionario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Hora_Viagem" EntityType="Self.Tbl_Hora_Viagem" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Login" EntityType="Self.Tbl_Login" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Motorista" EntityType="Self.Tbl_Motorista" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Passageiro_Viagem" EntityType="Self.Tbl_Passageiro_Viagem" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Veiculo" EntityType="Self.Tbl_Veiculo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Viagem" EntityType="Self.Tbl_Viagem" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Tbl_Aluno__Clien__440B1D61" Association="Self.FK__Tbl_Aluno__Clien__440B1D61">
+            <End Role="Tbl_Cliente" EntitySet="Tbl_Cliente" />
+            <End Role="Tbl_Aluno" EntitySet="Tbl_Aluno" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Aluno__Escol__6754599E" Association="Self.FK__Tbl_Aluno__Escol__6754599E">
+            <End Role="Tbl_Escola" EntitySet="Tbl_Escola" />
+            <End Role="Tbl_Aluno" EntitySet="Tbl_Aluno" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Aluno__Veicu__44FF419A" Association="Self.FK__Tbl_Aluno__Veicu__44FF419A">
+            <End Role="Tbl_Veiculo" EntitySet="Tbl_Veiculo" />
+            <End Role="Tbl_Aluno" EntitySet="Tbl_Aluno" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Ender__Aluno__6477ECF3" Association="Self.FK__Tbl_Ender__Aluno__6477ECF3">
+            <End Role="Tbl_Aluno" EntitySet="Tbl_Aluno" />
+            <End Role="Tbl_Endereco" EntitySet="Tbl_Endereco" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Ender__Viage__6383C8BA" Association="Self.FK__Tbl_Ender__Viage__6383C8BA">
+            <End Role="Tbl_Viagem" EntitySet="Tbl_Viagem" />
+            <End Role="Tbl_Endereco" EntitySet="Tbl_Endereco" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Hora___Aluno__5DCAEF64" Association="Self.FK__Tbl_Hora___Aluno__5DCAEF64">
+            <End Role="Tbl_Aluno" EntitySet="Tbl_Aluno" />
+            <End Role="Tbl_Hora_Viagem" EntitySet="Tbl_Hora_Viagem" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Hora___Viage__5CD6CB2B" Association="Self.FK__Tbl_Hora___Viage__5CD6CB2B">
+            <End Role="Tbl_Viagem" EntitySet="Tbl_Viagem" />
+            <End Role="Tbl_Hora_Viagem" EntitySet="Tbl_Hora_Viagem" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Login__Clien__571DF1D5" Association="Self.FK__Tbl_Login__Clien__571DF1D5">
+            <End Role="Tbl_Cliente" EntitySet="Tbl_Cliente" />
+            <End Role="Tbl_Login" EntitySet="Tbl_Login" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Login__Funci__5812160E" Association="Self.FK__Tbl_Login__Funci__5812160E">
+            <End Role="Tbl_Funcionario" EntitySet="Tbl_Funcionario" />
+            <End Role="Tbl_Login" EntitySet="Tbl_Login" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Motor__Funci__20C1E124" Association="Self.FK__Tbl_Motor__Funci__20C1E124">
+            <End Role="Tbl_Funcionario" EntitySet="Tbl_Funcionario" />
+            <End Role="Tbl_Motorista" EntitySet="Tbl_Motorista" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Motor__Veicu__60A75C0F" Association="Self.FK__Tbl_Motor__Veicu__60A75C0F">
+            <End Role="Tbl_Veiculo" EntitySet="Tbl_Veiculo" />
+            <End Role="Tbl_Motorista" EntitySet="Tbl_Motorista" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Passa__Aluno__5FB337D6" Association="Self.FK__Tbl_Passa__Aluno__5FB337D6">
+            <End Role="Tbl_Aluno" EntitySet="Tbl_Aluno" />
+            <End Role="Tbl_Passageiro_Viagem" EntitySet="Tbl_Passageiro_Viagem" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Passa__Viage__5EBF139D" Association="Self.FK__Tbl_Passa__Viage__5EBF139D">
+            <End Role="Tbl_Viagem" EntitySet="Tbl_Viagem" />
+            <End Role="Tbl_Passageiro_Viagem" EntitySet="Tbl_Passageiro_Viagem" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Veicu__Escol__619B8048" Association="Self.FK__Tbl_Veicu__Escol__619B8048">
+            <End Role="Tbl_Escola" EntitySet="Tbl_Escola" />
+            <End Role="Tbl_Veiculo" EntitySet="Tbl_Veiculo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Veicu__Motor__628FA481" Association="Self.FK__Tbl_Veicu__Motor__628FA481">
+            <End Role="Tbl_Veiculo" EntitySet="Tbl_Veiculo" />
+            <End Role="Tbl_Veiculo1" EntitySet="Tbl_Veiculo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Viage__Aluno__656C112C" Association="Self.FK__Tbl_Viage__Aluno__656C112C">
+            <End Role="Tbl_Aluno" EntitySet="Tbl_Aluno" />
+            <End Role="Tbl_Viagem" EntitySet="Tbl_Viagem" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Viage__Escol__66603565" Association="Self.FK__Tbl_Viage__Escol__66603565">
+            <End Role="Tbl_Escola" EntitySet="Tbl_Escola" />
+            <End Role="Tbl_Viagem" EntitySet="Tbl_Viagem" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Viage__Motor__3B75D760" Association="Self.FK__Tbl_Viage__Motor__3B75D760">
+            <End Role="Tbl_Motorista" EntitySet="Tbl_Motorista" />
+            <End Role="Tbl_Viagem" EntitySet="Tbl_Viagem" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Viage__Passa__398D8EEE" Association="Self.FK__Tbl_Viage__Passa__398D8EEE">
+            <End Role="Tbl_Passageiro_Viagem" EntitySet="Tbl_Passageiro_Viagem" />
+            <End Role="Tbl_Viagem" EntitySet="Tbl_Viagem" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Viage__Veicu__3A81B327" Association="Self.FK__Tbl_Viage__Veicu__3A81B327">
+            <End Role="Tbl_Veiculo" EntitySet="Tbl_Veiculo" />
+            <End Role="Tbl_Viagem" EntitySet="Tbl_Viagem" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SGTE2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Tbl_Aluno">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RG" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Escola" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Cidade" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="Bairro" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="CEP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Estado" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Endereco_1" Type="String" MaxLength="240" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Endereco_2" Type="String" MaxLength="240" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Ativo" Type="Int32" />
+          <Property Name="Cliente_ID" Type="Int32" />
+          <Property Name="Veiculo_ID" Type="Int32" />
+          <Property Name="Escola_ID" Type="Int32" />
+          <NavigationProperty Name="Tbl_Cliente" Relationship="Self.FK__Tbl_Aluno__Clien__440B1D61" FromRole="Tbl_Aluno" ToRole="Tbl_Cliente" />
+          <NavigationProperty Name="Tbl_Escola" Relationship="Self.FK__Tbl_Aluno__Escol__6754599E" FromRole="Tbl_Aluno" ToRole="Tbl_Escola" />
+          <NavigationProperty Name="Tbl_Veiculo" Relationship="Self.FK__Tbl_Aluno__Veicu__44FF419A" FromRole="Tbl_Aluno" ToRole="Tbl_Veiculo" />
+          <NavigationProperty Name="Tbl_Endereco" Relationship="Self.FK__Tbl_Ender__Aluno__6477ECF3" FromRole="Tbl_Aluno" ToRole="Tbl_Endereco" />
+          <NavigationProperty Name="Tbl_Hora_Viagem" Relationship="Self.FK__Tbl_Hora___Aluno__5DCAEF64" FromRole="Tbl_Aluno" ToRole="Tbl_Hora_Viagem" />
+          <NavigationProperty Name="Tbl_Passageiro_Viagem" Relationship="Self.FK__Tbl_Passa__Aluno__5FB337D6" FromRole="Tbl_Aluno" ToRole="Tbl_Passageiro_Viagem" />
+          <NavigationProperty Name="Tbl_Viagem" Relationship="Self.FK__Tbl_Viage__Aluno__656C112C" FromRole="Tbl_Aluno" ToRole="Tbl_Viagem" />
+        </EntityType>
+        <EntityType Name="Tbl_Cliente">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Cidade" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Bairro" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Endereco" Type="String" MaxLength="240" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Estado" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CEP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Data_Nasc" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="RG" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CPF" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Telefone" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="Celular" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="Ativo" Type="Int32" />
+          <NavigationProperty Name="Tbl_Aluno" Relationship="Self.FK__Tbl_Aluno__Clien__440B1D61" FromRole="Tbl_Cliente" ToRole="Tbl_Aluno" />
+          <NavigationProperty Name="Tbl_Login" Relationship="Self.FK__Tbl_Login__Clien__571DF1D5" FromRole="Tbl_Cliente" ToRole="Tbl_Login" />
+        </EntityType>
+        <EntityType Name="Tbl_Endereco">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="End_Embarque" Type="String" MaxLength="240" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="End_Desembarque" Type="String" MaxLength="240" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Viagem_ID" Type="Int32" />
+          <Property Name="Aluno_ID" Type="Int32" />
+          <NavigationProperty Name="Tbl_Aluno" Relationship="Self.FK__Tbl_Ender__Aluno__6477ECF3" FromRole="Tbl_Endereco" ToRole="Tbl_Aluno" />
+          <NavigationProperty Name="Tbl_Viagem" Relationship="Self.FK__Tbl_Ender__Viage__6383C8BA" FromRole="Tbl_Endereco" ToRole="Tbl_Viagem" />
+        </EntityType>
+        <EntityType Name="Tbl_Escola">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Endereco" Type="String" MaxLength="240" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Cidade" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Bairro" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CEP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Estado" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CNPJ" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Ativo" Type="Int32" />
+          <NavigationProperty Name="Tbl_Aluno" Relationship="Self.FK__Tbl_Aluno__Escol__6754599E" FromRole="Tbl_Escola" ToRole="Tbl_Aluno" />
+          <NavigationProperty Name="Tbl_Veiculo" Relationship="Self.FK__Tbl_Veicu__Escol__619B8048" FromRole="Tbl_Escola" ToRole="Tbl_Veiculo" />
+          <NavigationProperty Name="Tbl_Viagem" Relationship="Self.FK__Tbl_Viage__Escol__66603565" FromRole="Tbl_Escola" ToRole="Tbl_Viagem" />
+        </EntityType>
+        <EntityType Name="Tbl_Funcionario">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Funcao" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Matricula" Type="Int32" Nullable="false" />
+          <Property Name="Nome" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Endereco" Type="String" MaxLength="240" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Bairro" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Cidade" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CEP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Estado" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tel_Residencial" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="Tel_Celular" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RG" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CPF" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Data_Nasc" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Sexo" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Ativo" Type="Int32" />
+          <NavigationProperty Name="Tbl_Login" Relationship="Self.FK__Tbl_Login__Funci__5812160E" FromRole="Tbl_Funcionario" ToRole="Tbl_Login" />
+          <NavigationProperty Name="Tbl_Motorista" Relationship="Self.FK__Tbl_Motor__Funci__20C1E124" FromRole="Tbl_Funcionario" ToRole="Tbl_Motorista" />
+        </EntityType>
+        <EntityType Name="Tbl_Hora_Viagem">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Data" Type="DateTime" Precision="3" />
+          <Property Name="HoraReal_Embarque" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="HoraReal_Desembarque" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="HoraPrev_Embarque" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="HoraPrev_Desembarque" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Viagem_ID" Type="Int32" />
+          <Property Name="Aluno_ID" Type="Int32" />
+          <NavigationProperty Name="Tbl_Aluno" Relationship="Self.FK__Tbl_Hora___Aluno__5DCAEF64" FromRole="Tbl_Hora_Viagem" ToRole="Tbl_Aluno" />
+          <NavigationProperty Name="Tbl_Viagem" Relationship="Self.FK__Tbl_Hora___Viage__5CD6CB2B" FromRole="Tbl_Hora_Viagem" ToRole="Tbl_Viagem" />
+        </EntityType>
+        <EntityType Name="Tbl_Login">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Senha" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nivel_Acesso" Type="Int32" />
+          <Property Name="Cliente_ID" Type="Int32" />
+          <Property Name="Funcionario_ID" Type="Int32" />
+          <NavigationProperty Name="Tbl_Cliente" Relationship="Self.FK__Tbl_Login__Clien__571DF1D5" FromRole="Tbl_Login" ToRole="Tbl_Cliente" />
+          <NavigationProperty Name="Tbl_Funcionario" Relationship="Self.FK__Tbl_Login__Funci__5812160E" FromRole="Tbl_Login" ToRole="Tbl_Funcionario" />
+        </EntityType>
+        <EntityType Name="Tbl_Motorista">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CNH" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Funcionario_ID" Type="Int32" />
+          <Property Name="Veiculo_ID" Type="Int32" />
+          <Property Name="Ativo" Type="Int32" />
+          <NavigationProperty Name="Tbl_Funcionario" Relationship="Self.FK__Tbl_Motor__Funci__20C1E124" FromRole="Tbl_Motorista" ToRole="Tbl_Funcionario" />
+          <NavigationProperty Name="Tbl_Veiculo" Relationship="Self.FK__Tbl_Motor__Veicu__60A75C0F" FromRole="Tbl_Motorista" ToRole="Tbl_Veiculo" />
+          <NavigationProperty Name="Tbl_Viagem" Relationship="Self.FK__Tbl_Viage__Motor__3B75D760" FromRole="Tbl_Motorista" ToRole="Tbl_Viagem" />
+        </EntityType>
+        <EntityType Name="Tbl_Passageiro_Viagem">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Passageiros" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="Obs_Viagem" Type="String" MaxLength="240" FixedLength="false" Unicode="false" />
+          <Property Name="Viagem_ID" Type="Int32" />
+          <Property Name="Aluno_ID" Type="Int32" />
+          <NavigationProperty Name="Tbl_Aluno" Relationship="Self.FK__Tbl_Passa__Aluno__5FB337D6" FromRole="Tbl_Passageiro_Viagem" ToRole="Tbl_Aluno" />
+          <NavigationProperty Name="Tbl_Viagem" Relationship="Self.FK__Tbl_Passa__Viage__5EBF139D" FromRole="Tbl_Passageiro_Viagem" ToRole="Tbl_Viagem" />
+          <NavigationProperty Name="Tbl_Viagem1" Relationship="Self.FK__Tbl_Viage__Passa__398D8EEE" FromRole="Tbl_Passageiro_Viagem" ToRole="Tbl_Viagem" />
+        </EntityType>
+        <EntityType Name="Tbl_Veiculo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cod_Veiculo" Type="Int32" Nullable="false" />
+          <Property Name="Placa" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Modelo" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Renavam" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Cidade" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="Licenca" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Chassi" Type="String" MaxLength="17" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Ano_Fabricacao" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Num_Lugares" Type="Int32" Nullable="false" />
+          <Property Name="Lugares_Vagos" Type="Int32" Nullable="false" />
+          <Property Name="UF" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Ativo" Type="Int32" />
+          <Property Name="Status" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Escola_ID" Type="Int32" />
+          <Property Name="Motorista_ID" Type="Int32" />
+          <NavigationProperty Name="Tbl_Aluno" Relationship="Self.FK__Tbl_Aluno__Veicu__44FF419A" FromRole="Tbl_Veiculo" ToRole="Tbl_Aluno" />
+          <NavigationProperty Name="Tbl_Escola" Relationship="Self.FK__Tbl_Veicu__Escol__619B8048" FromRole="Tbl_Veiculo" ToRole="Tbl_Escola" />
+          <NavigationProperty Name="Tbl_Motorista" Relationship="Self.FK__Tbl_Motor__Veicu__60A75C0F" FromRole="Tbl_Veiculo" ToRole="Tbl_Motorista" />
+          <NavigationProperty Name="Tbl_Veiculo1" Relationship="Self.FK__Tbl_Veicu__Motor__628FA481" FromRole="Tbl_Veiculo" ToRole="Tbl_Veiculo1" />
+          <NavigationProperty Name="Tbl_Veiculo2" Relationship="Self.FK__Tbl_Veicu__Motor__628FA481" FromRole="Tbl_Veiculo1" ToRole="Tbl_Veiculo" />
+          <NavigationProperty Name="Tbl_Viagem" Relationship="Self.FK__Tbl_Viage__Veicu__3A81B327" FromRole="Tbl_Veiculo" ToRole="Tbl_Viagem" />
+        </EntityType>
+        <EntityType Name="Tbl_Viagem">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Motorista" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Data" Type="DateTime" Precision="3" />
+          <Property Name="Obs_Viagem" Type="String" MaxLength="240" FixedLength="false" Unicode="false" />
+          <Property Name="Tipo" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="Aluno_ID" Type="Int32" />
+          <Property Name="Escola_ID" Type="Int32" />
+          <Property Name="Veiculo_ID" Type="Int32" />
+          <Property Name="Motorista_ID" Type="Int32" />
+          <Property Name="Passageiro_ID" Type="Int32" />
+          <NavigationProperty Name="Tbl_Aluno" Relationship="Self.FK__Tbl_Viage__Aluno__656C112C" FromRole="Tbl_Viagem" ToRole="Tbl_Aluno" />
+          <NavigationProperty Name="Tbl_Endereco" Relationship="Self.FK__Tbl_Ender__Viage__6383C8BA" FromRole="Tbl_Viagem" ToRole="Tbl_Endereco" />
+          <NavigationProperty Name="Tbl_Escola" Relationship="Self.FK__Tbl_Viage__Escol__66603565" FromRole="Tbl_Viagem" ToRole="Tbl_Escola" />
+          <NavigationProperty Name="Tbl_Hora_Viagem" Relationship="Self.FK__Tbl_Hora___Viage__5CD6CB2B" FromRole="Tbl_Viagem" ToRole="Tbl_Hora_Viagem" />
+          <NavigationProperty Name="Tbl_Motorista" Relationship="Self.FK__Tbl_Viage__Motor__3B75D760" FromRole="Tbl_Viagem" ToRole="Tbl_Motorista" />
+          <NavigationProperty Name="Tbl_Passageiro_Viagem" Relationship="Self.FK__Tbl_Passa__Viage__5EBF139D" FromRole="Tbl_Viagem" ToRole="Tbl_Passageiro_Viagem" />
+          <NavigationProperty Name="Tbl_Passageiro_Viagem1" Relationship="Self.FK__Tbl_Viage__Passa__398D8EEE" FromRole="Tbl_Viagem" ToRole="Tbl_Passageiro_Viagem" />
+          <NavigationProperty Name="Tbl_Veiculo" Relationship="Self.FK__Tbl_Viage__Veicu__3A81B327" FromRole="Tbl_Viagem" ToRole="Tbl_Veiculo" />
+        </EntityType>
+        <Association Name="FK__Tbl_Aluno__Clien__440B1D61">
+          <End Role="Tbl_Cliente" Type="Self.Tbl_Cliente" Multiplicity="0..1" />
+          <End Role="Tbl_Aluno" Type="Self.Tbl_Aluno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Cliente">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Aluno">
+              <PropertyRef Name="Cliente_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Aluno__Escol__6754599E">
+          <End Role="Tbl_Escola" Type="Self.Tbl_Escola" Multiplicity="0..1" />
+          <End Role="Tbl_Aluno" Type="Self.Tbl_Aluno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Escola">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Aluno">
+              <PropertyRef Name="Escola_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Aluno__Veicu__44FF419A">
+          <End Role="Tbl_Veiculo" Type="Self.Tbl_Veiculo" Multiplicity="0..1" />
+          <End Role="Tbl_Aluno" Type="Self.Tbl_Aluno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Veiculo">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Aluno">
+              <PropertyRef Name="Veiculo_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Ender__Aluno__6477ECF3">
+          <End Role="Tbl_Aluno" Type="Self.Tbl_Aluno" Multiplicity="0..1" />
+          <End Role="Tbl_Endereco" Type="Self.Tbl_Endereco" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Aluno">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Endereco">
+              <PropertyRef Name="Aluno_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Hora___Aluno__5DCAEF64">
+          <End Role="Tbl_Aluno" Type="Self.Tbl_Aluno" Multiplicity="0..1" />
+          <End Role="Tbl_Hora_Viagem" Type="Self.Tbl_Hora_Viagem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Aluno">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Hora_Viagem">
+              <PropertyRef Name="Aluno_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Passa__Aluno__5FB337D6">
+          <End Role="Tbl_Aluno" Type="Self.Tbl_Aluno" Multiplicity="0..1" />
+          <End Role="Tbl_Passageiro_Viagem" Type="Self.Tbl_Passageiro_Viagem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Aluno">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Passageiro_Viagem">
+              <PropertyRef Name="Aluno_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Viage__Aluno__656C112C">
+          <End Role="Tbl_Aluno" Type="Self.Tbl_Aluno" Multiplicity="0..1" />
+          <End Role="Tbl_Viagem" Type="Self.Tbl_Viagem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Aluno">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Viagem">
+              <PropertyRef Name="Aluno_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Login__Clien__571DF1D5">
+          <End Role="Tbl_Cliente" Type="Self.Tbl_Cliente" Multiplicity="0..1" />
+          <End Role="Tbl_Login" Type="Self.Tbl_Login" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Cliente">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Login">
+              <PropertyRef Name="Cliente_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Ender__Viage__6383C8BA">
+          <End Role="Tbl_Viagem" Type="Self.Tbl_Viagem" Multiplicity="0..1" />
+          <End Role="Tbl_Endereco" Type="Self.Tbl_Endereco" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Viagem">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Endereco">
+              <PropertyRef Name="Viagem_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Veicu__Escol__619B8048">
+          <End Role="Tbl_Escola" Type="Self.Tbl_Escola" Multiplicity="0..1" />
+          <End Role="Tbl_Veiculo" Type="Self.Tbl_Veiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Escola">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Veiculo">
+              <PropertyRef Name="Escola_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Viage__Escol__66603565">
+          <End Role="Tbl_Escola" Type="Self.Tbl_Escola" Multiplicity="0..1" />
+          <End Role="Tbl_Viagem" Type="Self.Tbl_Viagem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Escola">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Viagem">
+              <PropertyRef Name="Escola_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Login__Funci__5812160E">
+          <End Role="Tbl_Funcionario" Type="Self.Tbl_Funcionario" Multiplicity="0..1" />
+          <End Role="Tbl_Login" Type="Self.Tbl_Login" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Funcionario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Login">
+              <PropertyRef Name="Funcionario_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Motor__Funci__20C1E124">
+          <End Role="Tbl_Funcionario" Type="Self.Tbl_Funcionario" Multiplicity="0..1" />
+          <End Role="Tbl_Motorista" Type="Self.Tbl_Motorista" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Funcionario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Motorista">
+              <PropertyRef Name="Funcionario_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Hora___Viage__5CD6CB2B">
+          <End Role="Tbl_Viagem" Type="Self.Tbl_Viagem" Multiplicity="0..1" />
+          <End Role="Tbl_Hora_Viagem" Type="Self.Tbl_Hora_Viagem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Viagem">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Hora_Viagem">
+              <PropertyRef Name="Viagem_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Motor__Veicu__60A75C0F">
+          <End Role="Tbl_Veiculo" Type="Self.Tbl_Veiculo" Multiplicity="0..1" />
+          <End Role="Tbl_Motorista" Type="Self.Tbl_Motorista" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Veiculo">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Motorista">
+              <PropertyRef Name="Veiculo_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Viage__Motor__3B75D760">
+          <End Role="Tbl_Motorista" Type="Self.Tbl_Motorista" Multiplicity="0..1" />
+          <End Role="Tbl_Viagem" Type="Self.Tbl_Viagem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Motorista">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Viagem">
+              <PropertyRef Name="Motorista_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Passa__Viage__5EBF139D">
+          <End Role="Tbl_Viagem" Type="Self.Tbl_Viagem" Multiplicity="0..1" />
+          <End Role="Tbl_Passageiro_Viagem" Type="Self.Tbl_Passageiro_Viagem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Viagem">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Passageiro_Viagem">
+              <PropertyRef Name="Viagem_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Viage__Passa__398D8EEE">
+          <End Role="Tbl_Passageiro_Viagem" Type="Self.Tbl_Passageiro_Viagem" Multiplicity="0..1" />
+          <End Role="Tbl_Viagem" Type="Self.Tbl_Viagem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Passageiro_Viagem">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Viagem">
+              <PropertyRef Name="Passageiro_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Veicu__Motor__628FA481">
+          <End Role="Tbl_Veiculo" Type="Self.Tbl_Veiculo" Multiplicity="0..1" />
+          <End Role="Tbl_Veiculo1" Type="Self.Tbl_Veiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Veiculo">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Veiculo1">
+              <PropertyRef Name="Motorista_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Viage__Veicu__3A81B327">
+          <End Role="Tbl_Veiculo" Type="Self.Tbl_Veiculo" Multiplicity="0..1" />
+          <End Role="Tbl_Viagem" Type="Self.Tbl_Viagem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Veiculo">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tbl_Viagem">
+              <PropertyRef Name="Veiculo_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SGTE2Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="Tbl_Aluno" EntityType="Self.Tbl_Aluno" />
+          <EntitySet Name="Tbl_Cliente" EntityType="Self.Tbl_Cliente" />
+          <EntitySet Name="Tbl_Endereco" EntityType="Self.Tbl_Endereco" />
+          <EntitySet Name="Tbl_Escola" EntityType="Self.Tbl_Escola" />
+          <EntitySet Name="Tbl_Funcionario" EntityType="Self.Tbl_Funcionario" />
+          <EntitySet Name="Tbl_Hora_Viagem" EntityType="Self.Tbl_Hora_Viagem" />
+          <EntitySet Name="Tbl_Login" EntityType="Self.Tbl_Login" />
+          <EntitySet Name="Tbl_Motorista" EntityType="Self.Tbl_Motorista" />
+          <EntitySet Name="Tbl_Passageiro_Viagem" EntityType="Self.Tbl_Passageiro_Viagem" />
+          <EntitySet Name="Tbl_Veiculo" EntityType="Self.Tbl_Veiculo" />
+          <EntitySet Name="Tbl_Viagem" EntityType="Self.Tbl_Viagem" />
+          <AssociationSet Name="FK__Tbl_Aluno__Clien__440B1D61" Association="Self.FK__Tbl_Aluno__Clien__440B1D61">
+            <End Role="Tbl_Cliente" EntitySet="Tbl_Cliente" />
+            <End Role="Tbl_Aluno" EntitySet="Tbl_Aluno" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Aluno__Escol__6754599E" Association="Self.FK__Tbl_Aluno__Escol__6754599E">
+            <End Role="Tbl_Escola" EntitySet="Tbl_Escola" />
+            <End Role="Tbl_Aluno" EntitySet="Tbl_Aluno" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Aluno__Veicu__44FF419A" Association="Self.FK__Tbl_Aluno__Veicu__44FF419A">
+            <End Role="Tbl_Veiculo" EntitySet="Tbl_Veiculo" />
+            <End Role="Tbl_Aluno" EntitySet="Tbl_Aluno" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Ender__Aluno__6477ECF3" Association="Self.FK__Tbl_Ender__Aluno__6477ECF3">
+            <End Role="Tbl_Aluno" EntitySet="Tbl_Aluno" />
+            <End Role="Tbl_Endereco" EntitySet="Tbl_Endereco" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Hora___Aluno__5DCAEF64" Association="Self.FK__Tbl_Hora___Aluno__5DCAEF64">
+            <End Role="Tbl_Aluno" EntitySet="Tbl_Aluno" />
+            <End Role="Tbl_Hora_Viagem" EntitySet="Tbl_Hora_Viagem" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Passa__Aluno__5FB337D6" Association="Self.FK__Tbl_Passa__Aluno__5FB337D6">
+            <End Role="Tbl_Aluno" EntitySet="Tbl_Aluno" />
+            <End Role="Tbl_Passageiro_Viagem" EntitySet="Tbl_Passageiro_Viagem" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Viage__Aluno__656C112C" Association="Self.FK__Tbl_Viage__Aluno__656C112C">
+            <End Role="Tbl_Aluno" EntitySet="Tbl_Aluno" />
+            <End Role="Tbl_Viagem" EntitySet="Tbl_Viagem" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Login__Clien__571DF1D5" Association="Self.FK__Tbl_Login__Clien__571DF1D5">
+            <End Role="Tbl_Cliente" EntitySet="Tbl_Cliente" />
+            <End Role="Tbl_Login" EntitySet="Tbl_Login" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Ender__Viage__6383C8BA" Association="Self.FK__Tbl_Ender__Viage__6383C8BA">
+            <End Role="Tbl_Viagem" EntitySet="Tbl_Viagem" />
+            <End Role="Tbl_Endereco" EntitySet="Tbl_Endereco" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Veicu__Escol__619B8048" Association="Self.FK__Tbl_Veicu__Escol__619B8048">
+            <End Role="Tbl_Escola" EntitySet="Tbl_Escola" />
+            <End Role="Tbl_Veiculo" EntitySet="Tbl_Veiculo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Viage__Escol__66603565" Association="Self.FK__Tbl_Viage__Escol__66603565">
+            <End Role="Tbl_Escola" EntitySet="Tbl_Escola" />
+            <End Role="Tbl_Viagem" EntitySet="Tbl_Viagem" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Login__Funci__5812160E" Association="Self.FK__Tbl_Login__Funci__5812160E">
+            <End Role="Tbl_Funcionario" EntitySet="Tbl_Funcionario" />
+            <End Role="Tbl_Login" EntitySet="Tbl_Login" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Motor__Funci__20C1E124" Association="Self.FK__Tbl_Motor__Funci__20C1E124">
+            <End Role="Tbl_Funcionario" EntitySet="Tbl_Funcionario" />
+            <End Role="Tbl_Motorista" EntitySet="Tbl_Motorista" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Hora___Viage__5CD6CB2B" Association="Self.FK__Tbl_Hora___Viage__5CD6CB2B">
+            <End Role="Tbl_Viagem" EntitySet="Tbl_Viagem" />
+            <End Role="Tbl_Hora_Viagem" EntitySet="Tbl_Hora_Viagem" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Motor__Veicu__60A75C0F" Association="Self.FK__Tbl_Motor__Veicu__60A75C0F">
+            <End Role="Tbl_Veiculo" EntitySet="Tbl_Veiculo" />
+            <End Role="Tbl_Motorista" EntitySet="Tbl_Motorista" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Viage__Motor__3B75D760" Association="Self.FK__Tbl_Viage__Motor__3B75D760">
+            <End Role="Tbl_Motorista" EntitySet="Tbl_Motorista" />
+            <End Role="Tbl_Viagem" EntitySet="Tbl_Viagem" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Passa__Viage__5EBF139D" Association="Self.FK__Tbl_Passa__Viage__5EBF139D">
+            <End Role="Tbl_Viagem" EntitySet="Tbl_Viagem" />
+            <End Role="Tbl_Passageiro_Viagem" EntitySet="Tbl_Passageiro_Viagem" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Viage__Passa__398D8EEE" Association="Self.FK__Tbl_Viage__Passa__398D8EEE">
+            <End Role="Tbl_Passageiro_Viagem" EntitySet="Tbl_Passageiro_Viagem" />
+            <End Role="Tbl_Viagem" EntitySet="Tbl_Viagem" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Veicu__Motor__628FA481" Association="Self.FK__Tbl_Veicu__Motor__628FA481">
+            <End Role="Tbl_Veiculo" EntitySet="Tbl_Veiculo" />
+            <End Role="Tbl_Veiculo1" EntitySet="Tbl_Veiculo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Viage__Veicu__3A81B327" Association="Self.FK__Tbl_Viage__Veicu__3A81B327">
+            <End Role="Tbl_Veiculo" EntitySet="Tbl_Veiculo" />
+            <End Role="Tbl_Viagem" EntitySet="Tbl_Viagem" />
+          </AssociationSet>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(SGTE2Model.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(SGTE2Model.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+          <FunctionImport Name="stp_BuscarFuncionario" ReturnType="Collection(SGTE2Model.stp_BuscarFuncionario_Result)">
+          <Parameter Name="cpf" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="stp_CadastroAluno">
+            <Parameter Name="Cliente_ID" Mode="In" Type="Int32" />
+            <Parameter Name="NomeCliente" Mode="In" Type="String" />
+            <Parameter Name="Nome" Mode="In" Type="String" />
+            <Parameter Name="Endereço_1" Mode="In" Type="String" />
+            <Parameter Name="Endereco_2" Mode="In" Type="String" />
+            <Parameter Name="RG" Mode="In" Type="String" />
+            <Parameter Name="Escola" Mode="In" Type="String" />
+            <Parameter Name="EscolaID" Mode="In" Type="Int32" />
+            <Parameter Name="Matricula" Mode="In" Type="Int32" />
+            <Parameter Name="Mensagem" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="stp_CadastroCliente">
+            <Parameter Name="ID" Mode="In" Type="Int32" />
+            <Parameter Name="Nome" Mode="In" Type="String" />
+            <Parameter Name="Endereco" Mode="In" Type="String" />
+            <Parameter Name="Bairro" Mode="In" Type="String" />
+            <Parameter Name="Cidade" Mode="In" Type="String" />
+            <Parameter Name="CEP" Mode="In" Type="String" />
+            <Parameter Name="Estado" Mode="In" Type="String" />
+            <Parameter Name="Celular" Mode="In" Type="String" />
+            <Parameter Name="Telefone" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="RG" Mode="In" Type="String" />
+            <Parameter Name="CPF" Mode="In" Type="String" />
+            <Parameter Name="Data_Nasc" Mode="In" Type="DateTime" />
+            <Parameter Name="Matricula" Mode="In" Type="Int32" />
+            <Parameter Name="Mensagem" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="stp_CadastroFuncionario">
+            <Parameter Name="ID" Mode="In" Type="Int32" />
+            <Parameter Name="Funcao" Mode="In" Type="String" />
+            <Parameter Name="Matricula" Mode="In" Type="Int32" />
+            <Parameter Name="Nome" Mode="In" Type="String" />
+            <Parameter Name="Endereco" Mode="In" Type="String" />
+            <Parameter Name="Bairro" Mode="In" Type="String" />
+            <Parameter Name="Cidade" Mode="In" Type="String" />
+            <Parameter Name="CEP" Mode="In" Type="String" />
+            <Parameter Name="Estado" Mode="In" Type="String" />
+            <Parameter Name="Tel_Residencial" Mode="In" Type="String" />
+            <Parameter Name="Tel_Celular" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="RG" Mode="In" Type="String" />
+            <Parameter Name="CPF" Mode="In" Type="String" />
+            <Parameter Name="Data_Nasc" Mode="In" Type="DateTime" />
+            <Parameter Name="Sexo" Mode="In" Type="String" />
+            <Parameter Name="NivelAcesso" Mode="In" Type="Int32" />
+            <Parameter Name="Nivel" Mode="In" Type="Int32" />
+            <Parameter Name="Mensagem" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="stp_DesativarFuncionario">
+          <Parameter Name="cpf" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="stp_IncluirAlunoVeiculo" ReturnType="Collection(String)">
+            <Parameter Name="Aluno_ID" Mode="In" Type="Int32" />
+            <Parameter Name="NomeAluno" Mode="In" Type="String" />
+            <Parameter Name="Placa" Mode="In" Type="String" />
+            <Parameter Name="Veiculo_ID" Mode="In" Type="Int32" />
+            <Parameter Name="NivelAcesso" Mode="In" Type="Int32" />
+            <Parameter Name="Matricula" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="stp_ListarAluno" ReturnType="Collection(SGTE2Model.stp_ListarAluno_Result)" />
+          <FunctionImport Name="stp_ListarCliente" ReturnType="Collection(SGTE2Model.stp_ListarCliente_Result)" />
+          <FunctionImport Name="stp_ListarFuncionario" ReturnType="Collection(SGTE2Model.stp_ListarFuncionario_Result)" />
+          <FunctionImport Name="stp_MudarAlunoVeiculo" ReturnType="Collection(String)">
+            <Parameter Name="Aluno_ID" Mode="In" Type="Int32" />
+            <Parameter Name="NomeAluno" Mode="In" Type="String" />
+            <Parameter Name="PlacaNova" Mode="In" Type="String" />
+            <Parameter Name="Veiculo_ID_Atual" Mode="In" Type="Int32" />
+            <Parameter Name="Veiculo_ID_Novo" Mode="In" Type="Int32" />
+            <Parameter Name="NivelAcesso" Mode="In" Type="Int32" />
+            <Parameter Name="Matricula" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="stp_RelatorioAlunoVeiculo" ReturnType="Collection(SGTE2Model.stp_RelatorioAlunoVeiculo_Result)">
+            <Parameter Name="Aluno_ID" Mode="In" Type="Int32" />
+            <Parameter Name="NomeAluno" Mode="In" Type="String" />
+            <Parameter Name="Placa" Mode="In" Type="String" />
+            <Parameter Name="Veiculo_ID" Mode="In" Type="Int32" />
+            <Parameter Name="NivelAcesso" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="stp_SelecionaAluno" ReturnType="Collection(SGTE2Model.stp_SelecionaAluno_Result)">
+            <Parameter Name="ID" Mode="In" Type="Int32" />
+            <Parameter Name="NivelAcesso" Mode="In" Type="Int32" />
+            <Parameter Name="Mensagem" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="stp_SelecionaViagem" ReturnType="Collection(SGTE2Model.stp_SelecionaViagem_Result)">
+            <Parameter Name="nome" Mode="In" Type="String" />
+            <Parameter Name="data" Mode="In" Type="DateTime" />
+            <Parameter Name="data2" Mode="In" Type="DateTime" />
+            <Parameter Name="ID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="stp_ValidaUsuario" ReturnType="Collection(String)">
+            <Parameter Name="Login" Mode="In" Type="String" />
+            <Parameter Name="Senha" Mode="In" Type="String" />
+            <Parameter Name="Mensagem" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="ListarAlunoVeiculo">
+            <Parameter Name="Aluno_ID" Mode="In" Type="Int32" />
+            <Parameter Name="NomeAluno" Mode="In" Type="String" />
+            <Parameter Name="Placa" Mode="In" Type="String" />
+            <Parameter Name="Veiculo_ID" Mode="In" Type="Int32" />
+            <Parameter Name="NivelAcesso" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="ListarAlunos" />
+          <FunctionImport Name="stp_RelacaoAlunoVeiculo" ReturnType="Collection(SGTE2Model.stp_RelacaoAlunoVeiculo_Result)">
+            <Parameter Name="Veiculo_ID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="RelacaoAlunoVeiculo">
+            <Parameter Name="Veiculo_ID" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="stp_BuscarFuncionario_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Funcao" Nullable="false" MaxLength="80" />
+          <Property Type="Int32" Name="Matricula" Nullable="false" />
+          <Property Type="String" Name="Nome" Nullable="false" MaxLength="80" />
+          <Property Type="String" Name="Endereco" Nullable="false" MaxLength="240" />
+          <Property Type="String" Name="Bairro" Nullable="false" MaxLength="40" />
+          <Property Type="String" Name="Cidade" Nullable="false" MaxLength="40" />
+          <Property Type="String" Name="CEP" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Estado" Nullable="false" MaxLength="2" />
+          <Property Type="String" Name="Tel_Residencial" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="Tel_Celular" Nullable="false" MaxLength="80" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="80" />
+          <Property Type="String" Name="RG" Nullable="false" MaxLength="9" />
+          <Property Type="String" Name="CPF" Nullable="false" MaxLength="11" />
+          <Property Type="DateTime" Name="Data_Nasc" Nullable="false" Precision="23" />
+          <Property Type="String" Name="Sexo" Nullable="false" MaxLength="1" />
+          <Property Type="Int32" Name="Ativo" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="stp_ListarAluno_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Nome" Nullable="false" MaxLength="80" />
+          <Property Type="String" Name="RG" Nullable="false" MaxLength="9" />
+          <Property Type="String" Name="Escola" Nullable="false" MaxLength="80" />
+          <Property Type="String" Name="Cidade" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="Bairro" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="CEP" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Estado" Nullable="false" MaxLength="2" />
+          <Property Type="String" Name="Endereco_1" Nullable="false" MaxLength="240" />
+          <Property Type="String" Name="Endereco_2" Nullable="false" MaxLength="240" />
+          <Property Type="Int32" Name="Ativo" Nullable="true" />
+          <Property Type="Int32" Name="Cliente_ID" Nullable="true" />
+          <Property Type="Int32" Name="Veiculo_ID" Nullable="true" />
+          <Property Type="Int32" Name="Escola_ID" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="stp_ListarCliente_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Nome" Nullable="false" MaxLength="80" />
+          <Property Type="String" Name="Cidade" Nullable="false" MaxLength="40" />
+          <Property Type="String" Name="Bairro" Nullable="false" MaxLength="40" />
+          <Property Type="String" Name="Endereco" Nullable="false" MaxLength="240" />
+          <Property Type="String" Name="Estado" Nullable="false" MaxLength="2" />
+          <Property Type="String" Name="CEP" Nullable="false" MaxLength="10" />
+          <Property Type="DateTime" Name="Data_Nasc" Nullable="false" Precision="23" />
+          <Property Type="String" Name="RG" Nullable="false" MaxLength="9" />
+          <Property Type="String" Name="CPF" Nullable="false" MaxLength="11" />
+          <Property Type="String" Name="Telefone" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="Celular" Nullable="false" MaxLength="80" />
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="80" />
+          <Property Type="Int32" Name="Ativo" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="stp_ListarFuncionario_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Funcao" Nullable="false" MaxLength="80" />
+          <Property Type="Int32" Name="Matricula" Nullable="false" />
+          <Property Type="String" Name="Nome" Nullable="false" MaxLength="80" />
+          <Property Type="String" Name="Endereco" Nullable="false" MaxLength="240" />
+          <Property Type="String" Name="Bairro" Nullable="false" MaxLength="40" />
+          <Property Type="String" Name="Cidade" Nullable="false" MaxLength="40" />
+          <Property Type="String" Name="CEP" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Estado" Nullable="false" MaxLength="2" />
+          <Property Type="String" Name="Tel_Residencial" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="Tel_Celular" Nullable="false" MaxLength="80" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="80" />
+          <Property Type="String" Name="RG" Nullable="false" MaxLength="9" />
+          <Property Type="String" Name="CPF" Nullable="false" MaxLength="11" />
+          <Property Type="DateTime" Name="Data_Nasc" Nullable="false" Precision="23" />
+          <Property Type="String" Name="Sexo" Nullable="false" MaxLength="1" />
+          <Property Type="Int32" Name="Ativo" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="stp_RelatorioAlunoVeiculo_Result">
+          <Property Type="String" Name="Nome" Nullable="false" MaxLength="80" />
+          <Property Type="String" Name="Endereco_1" Nullable="false" MaxLength="240" />
+          <Property Type="String" Name="RG" Nullable="false" MaxLength="9" />
+          <Property Type="String" Name="Escola" Nullable="false" MaxLength="80" />
+        </ComplexType>
+        <ComplexType Name="stp_SelecionaAluno_Result">
+          <Property Type="String" Name="Nome" Nullable="false" MaxLength="80" />
+          <Property Type="String" Name="RG" Nullable="false" MaxLength="9" />
+          <Property Type="String" Name="Escola" Nullable="false" MaxLength="80" />
+        </ComplexType>
+        <ComplexType Name="stp_SelecionaViagem_Result">
+          <Property Type="String" Name="Passageiros" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="Escola" Nullable="false" MaxLength="80" />
+          <Property Type="DateTime" Name="Data" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Motorista" Nullable="false" MaxLength="80" />
+          <Property Type="String" Name="Tipo" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="Horario_Embarque" Nullable="true" MaxLength="5" />
+          <Property Type="String" Name="Horario_Desembarque" Nullable="true" MaxLength="5" />
+          <Property Type="String" Name="Embarque" Nullable="false" MaxLength="240" />
+          <Property Type="String" Name="Desemberque" Nullable="false" MaxLength="240" />
+        </ComplexType>
+        <ComplexType Name="stp_RelacaoAlunoVeiculo_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Nome" Nullable="false" MaxLength="80" />
+          <Property Type="String" Name="RG" Nullable="false" MaxLength="9" />
+          <Property Type="String" Name="Escola" Nullable="false" MaxLength="80" />
+          <Property Type="String" Name="Cidade" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="Bairro" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="CEP" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Estado" Nullable="false" MaxLength="2" />
+          <Property Type="String" Name="Endereco_1" Nullable="false" MaxLength="240" />
+          <Property Type="String" Name="Endereco_2" Nullable="false" MaxLength="240" />
+          <Property Type="Int32" Name="Ativo" Nullable="true" />
+          <Property Type="Int32" Name="Cliente_ID" Nullable="true" />
+          <Property Type="Int32" Name="Veiculo_ID" Nullable="true" />
+          <Property Type="Int32" Name="Escola_ID" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SGTE2ModelStoreContainer" CdmEntityContainer="SGTE2Entities">
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="SGTE2Model.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Aluno">
+            <EntityTypeMapping TypeName="SGTE2Model.Tbl_Aluno">
+              <MappingFragment StoreEntitySet="Tbl_Aluno">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="RG" ColumnName="RG" />
+                <ScalarProperty Name="Escola" ColumnName="Escola" />
+                <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+                <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+                <ScalarProperty Name="CEP" ColumnName="CEP" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Endereco_1" ColumnName="Endereco_1" />
+                <ScalarProperty Name="Endereco_2" ColumnName="Endereco_2" />
+                <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+                <ScalarProperty Name="Cliente_ID" ColumnName="Cliente_ID" />
+                <ScalarProperty Name="Veiculo_ID" ColumnName="Veiculo_ID" />
+                <ScalarProperty Name="Escola_ID" ColumnName="Escola_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Cliente">
+            <EntityTypeMapping TypeName="SGTE2Model.Tbl_Cliente">
+              <MappingFragment StoreEntitySet="Tbl_Cliente">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+                <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+                <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="CEP" ColumnName="CEP" />
+                <ScalarProperty Name="Data_Nasc" ColumnName="Data_Nasc" />
+                <ScalarProperty Name="RG" ColumnName="RG" />
+                <ScalarProperty Name="CPF" ColumnName="CPF" />
+                <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+                <ScalarProperty Name="Celular" ColumnName="Celular" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Endereco">
+            <EntityTypeMapping TypeName="SGTE2Model.Tbl_Endereco">
+              <MappingFragment StoreEntitySet="Tbl_Endereco">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="End_Embarque" ColumnName="End_Embarque" />
+                <ScalarProperty Name="End_Desembarque" ColumnName="End_Desembarque" />
+                <ScalarProperty Name="Viagem_ID" ColumnName="Viagem_ID" />
+                <ScalarProperty Name="Aluno_ID" ColumnName="Aluno_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Escola">
+            <EntityTypeMapping TypeName="SGTE2Model.Tbl_Escola">
+              <MappingFragment StoreEntitySet="Tbl_Escola">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+                <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+                <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+                <ScalarProperty Name="CEP" ColumnName="CEP" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="CNPJ" ColumnName="CNPJ" />
+                <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Funcionario">
+            <EntityTypeMapping TypeName="SGTE2Model.Tbl_Funcionario">
+              <MappingFragment StoreEntitySet="Tbl_Funcionario">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Funcao" ColumnName="Funcao" />
+                <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+                <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+                <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+                <ScalarProperty Name="CEP" ColumnName="CEP" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Tel_Residencial" ColumnName="Tel_Residencial" />
+                <ScalarProperty Name="Tel_Celular" ColumnName="Tel_Celular" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="RG" ColumnName="RG" />
+                <ScalarProperty Name="CPF" ColumnName="CPF" />
+                <ScalarProperty Name="Data_Nasc" ColumnName="Data_Nasc" />
+                <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+                <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Hora_Viagem">
+            <EntityTypeMapping TypeName="SGTE2Model.Tbl_Hora_Viagem">
+              <MappingFragment StoreEntitySet="Tbl_Hora_Viagem">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="HoraReal_Embarque" ColumnName="HoraReal_Embarque" />
+                <ScalarProperty Name="HoraReal_Desembarque" ColumnName="HoraReal_Desembarque" />
+                <ScalarProperty Name="HoraPrev_Embarque" ColumnName="HoraPrev_Embarque" />
+                <ScalarProperty Name="HoraPrev_Desembarque" ColumnName="HoraPrev_Desembarque" />
+                <ScalarProperty Name="Viagem_ID" ColumnName="Viagem_ID" />
+                <ScalarProperty Name="Aluno_ID" ColumnName="Aluno_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Login">
+            <EntityTypeMapping TypeName="SGTE2Model.Tbl_Login">
+              <MappingFragment StoreEntitySet="Tbl_Login">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Senha" ColumnName="Senha" />
+                <ScalarProperty Name="Nivel_Acesso" ColumnName="Nivel_Acesso" />
+                <ScalarProperty Name="Cliente_ID" ColumnName="Cliente_ID" />
+                <ScalarProperty Name="Funcionario_ID" ColumnName="Funcionario_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Motorista">
+            <EntityTypeMapping TypeName="SGTE2Model.Tbl_Motorista">
+              <MappingFragment StoreEntitySet="Tbl_Motorista">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="CNH" ColumnName="CNH" />
+                <ScalarProperty Name="Funcionario_ID" ColumnName="Funcionario_ID" />
+                <ScalarProperty Name="Veiculo_ID" ColumnName="Veiculo_ID" />
+                <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Passageiro_Viagem">
+            <EntityTypeMapping TypeName="SGTE2Model.Tbl_Passageiro_Viagem">
+              <MappingFragment StoreEntitySet="Tbl_Passageiro_Viagem">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Passageiros" ColumnName="Passageiros" />
+                <ScalarProperty Name="Obs_Viagem" ColumnName="Obs_Viagem" />
+                <ScalarProperty Name="Viagem_ID" ColumnName="Viagem_ID" />
+                <ScalarProperty Name="Aluno_ID" ColumnName="Aluno_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Veiculo">
+            <EntityTypeMapping TypeName="SGTE2Model.Tbl_Veiculo">
+              <MappingFragment StoreEntitySet="Tbl_Veiculo">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Cod_Veiculo" ColumnName="Cod_Veiculo" />
+                <ScalarProperty Name="Placa" ColumnName="Placa" />
+                <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+                <ScalarProperty Name="Renavam" ColumnName="Renavam" />
+                <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+                <ScalarProperty Name="Licenca" ColumnName="Licenca" />
+                <ScalarProperty Name="Chassi" ColumnName="Chassi" />
+                <ScalarProperty Name="Ano_Fabricacao" ColumnName="Ano_Fabricacao" />
+                <ScalarProperty Name="Num_Lugares" ColumnName="Num_Lugares" />
+                <ScalarProperty Name="Lugares_Vagos" ColumnName="Lugares_Vagos" />
+                <ScalarProperty Name="UF" ColumnName="UF" />
+                <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Escola_ID" ColumnName="Escola_ID" />
+                <ScalarProperty Name="Motorista_ID" ColumnName="Motorista_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Viagem">
+            <EntityTypeMapping TypeName="SGTE2Model.Tbl_Viagem">
+              <MappingFragment StoreEntitySet="Tbl_Viagem">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Motorista" ColumnName="Motorista" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="Obs_Viagem" ColumnName="Obs_Viagem" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="Aluno_ID" ColumnName="Aluno_ID" />
+                <ScalarProperty Name="Escola_ID" ColumnName="Escola_ID" />
+                <ScalarProperty Name="Veiculo_ID" ColumnName="Veiculo_ID" />
+                <ScalarProperty Name="Motorista_ID" ColumnName="Motorista_ID" />
+                <ScalarProperty Name="Passageiro_ID" ColumnName="Passageiro_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="SGTE2Model.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="SGTE2Model.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="SGTE2Model.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="SGTE2Model.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SGTE2Model.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="SGTE2Model.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SGTE2Model.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="SGTE2Model.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="SGTE2Model.Store.sp_upgraddiagrams" />
+          <FunctionImportMapping FunctionImportName="stp_BuscarFuncionario" FunctionName="SGTE2Model.Store.stp_BuscarFuncionario">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SGTE2Model.stp_BuscarFuncionario_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Funcao" ColumnName="Funcao" />
+                <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+                <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+                <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+                <ScalarProperty Name="CEP" ColumnName="CEP" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Tel_Residencial" ColumnName="Tel_Residencial" />
+                <ScalarProperty Name="Tel_Celular" ColumnName="Tel_Celular" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="RG" ColumnName="RG" />
+                <ScalarProperty Name="CPF" ColumnName="CPF" />
+                <ScalarProperty Name="Data_Nasc" ColumnName="Data_Nasc" />
+                <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+                <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="stp_CadastroAluno" FunctionName="SGTE2Model.Store.stp_CadastroAluno" />
+          <FunctionImportMapping FunctionImportName="stp_CadastroCliente" FunctionName="SGTE2Model.Store.stp_CadastroCliente" />
+          <FunctionImportMapping FunctionImportName="stp_CadastroFuncionario" FunctionName="SGTE2Model.Store.stp_CadastroFuncionario" />
+          <FunctionImportMapping FunctionImportName="stp_DesativarFuncionario" FunctionName="SGTE2Model.Store.stp_DesativarFuncionario" />
+          <FunctionImportMapping FunctionImportName="stp_IncluirAlunoVeiculo" FunctionName="SGTE2Model.Store.stp_IncluirAlunoVeiculo" />
+          <FunctionImportMapping FunctionImportName="stp_ListarAluno" FunctionName="SGTE2Model.Store.stp_ListarAluno">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SGTE2Model.stp_ListarAluno_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="RG" ColumnName="RG" />
+                <ScalarProperty Name="Escola" ColumnName="Escola" />
+                <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+                <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+                <ScalarProperty Name="CEP" ColumnName="CEP" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Endereco_1" ColumnName="Endereco_1" />
+                <ScalarProperty Name="Endereco_2" ColumnName="Endereco_2" />
+                <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+                <ScalarProperty Name="Cliente_ID" ColumnName="Cliente_ID" />
+                <ScalarProperty Name="Veiculo_ID" ColumnName="Veiculo_ID" />
+                <ScalarProperty Name="Escola_ID" ColumnName="Escola_ID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="stp_ListarCliente" FunctionName="SGTE2Model.Store.stp_ListarCliente">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SGTE2Model.stp_ListarCliente_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+                <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+                <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="CEP" ColumnName="CEP" />
+                <ScalarProperty Name="Data_Nasc" ColumnName="Data_Nasc" />
+                <ScalarProperty Name="RG" ColumnName="RG" />
+                <ScalarProperty Name="CPF" ColumnName="CPF" />
+                <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+                <ScalarProperty Name="Celular" ColumnName="Celular" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="stp_ListarFuncionario" FunctionName="SGTE2Model.Store.stp_ListarFuncionario">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SGTE2Model.stp_ListarFuncionario_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Funcao" ColumnName="Funcao" />
+                <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+                <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+                <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+                <ScalarProperty Name="CEP" ColumnName="CEP" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Tel_Residencial" ColumnName="Tel_Residencial" />
+                <ScalarProperty Name="Tel_Celular" ColumnName="Tel_Celular" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="RG" ColumnName="RG" />
+                <ScalarProperty Name="CPF" ColumnName="CPF" />
+                <ScalarProperty Name="Data_Nasc" ColumnName="Data_Nasc" />
+                <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+                <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="stp_MudarAlunoVeiculo" FunctionName="SGTE2Model.Store.stp_MudarAlunoVeiculo" />
+          <FunctionImportMapping FunctionImportName="stp_SelecionaAluno" FunctionName="SGTE2Model.Store.stp_SelecionaAluno">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SGTE2Model.stp_SelecionaAluno_Result">
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="RG" ColumnName="RG" />
+                <ScalarProperty Name="Escola" ColumnName="Escola" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="stp_SelecionaViagem" FunctionName="SGTE2Model.Store.stp_SelecionaViagem">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SGTE2Model.stp_SelecionaViagem_Result">
+                <ScalarProperty Name="Passageiros" ColumnName="Passageiros" />
+                <ScalarProperty Name="Escola" ColumnName="Escola" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="Motorista" ColumnName="Motorista" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="Horario_Embarque" ColumnName="Horario_Embarque" />
+                <ScalarProperty Name="Horario_Desembarque" ColumnName="Horario_Desembarque" />
+                <ScalarProperty Name="Embarque" ColumnName="Embarque" />
+                <ScalarProperty Name="Desemberque" ColumnName="Desemberque" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="stp_ValidaUsuario" FunctionName="SGTE2Model.Store.stp_ValidaUsuario" />
+          <FunctionImportMapping FunctionImportName="ListarAlunos" FunctionName="SGTE2Model.Store.stp_ListarAluno" />
+          <FunctionImportMapping FunctionImportName="stp_RelacaoAlunoVeiculo" FunctionName="SGTE2Model.Store.stp_RelacaoAlunoVeiculo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SGTE2Model.stp_RelacaoAlunoVeiculo_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="RG" ColumnName="RG" />
+                <ScalarProperty Name="Escola" ColumnName="Escola" />
+                <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+                <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+                <ScalarProperty Name="CEP" ColumnName="CEP" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Endereco_1" ColumnName="Endereco_1" />
+                <ScalarProperty Name="Endereco_2" ColumnName="Endereco_2" />
+                <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+                <ScalarProperty Name="Cliente_ID" ColumnName="Cliente_ID" />
+                <ScalarProperty Name="Veiculo_ID" ColumnName="Veiculo_ID" />
+                <ScalarProperty Name="Escola_ID" ColumnName="Escola_ID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="RelacaoAlunoVeiculo" FunctionName="SGTE2Model.Store.stp_RelacaoAlunoVeiculo" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

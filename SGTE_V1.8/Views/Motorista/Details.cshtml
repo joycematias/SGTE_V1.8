@@ -1,0 +1,59 @@
+﻿@model SGTE_V1._8.Models.Tbl_Motorista
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tbl_Motorista</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CNH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CNH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ativo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ativo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tbl_Funcionario.Funcao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tbl_Funcionario.Funcao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tbl_Veiculo.Placa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tbl_Veiculo.Placa)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

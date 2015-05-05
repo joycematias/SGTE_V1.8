@@ -1,0 +1,110 @@
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\obj\Debug\SGTE_V1.8.csprojResolveAssemblyReference.cache
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\SGTE_V1.8.dll.config
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\SGTE_V1.8.dll
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\SGTE_V1.8.pdb
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Antlr3.Runtime.dll
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\EntityFramework.dll
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\EntityFramework.SqlServer.dll
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.dll
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Security.dll
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Security.Google.dll
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Web.Infrastructure.dll
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Newtonsoft.Json.dll
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Owin.dll
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\System.Web.Helpers.dll
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\System.Web.Mvc.dll
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\System.Web.Optimization.dll
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\System.Web.Razor.dll
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\System.Web.WebPages.Deployment.dll
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\System.Web.WebPages.dll
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\System.Web.WebPages.Razor.dll
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\WebGrease.dll
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\System.Web.Helpers.xml
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\System.Web.Mvc.xml
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\System.Web.Optimization.xml
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\System.Web.Razor.xml
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\System.Web.WebPages.xml
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\System.Web.WebPages.Deployment.xml
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\System.Web.WebPages.Razor.xml
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Antlr3.Runtime.pdb
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Newtonsoft.Json.xml
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\EntityFramework.xml
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\EntityFramework.SqlServer.xml
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.xml
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Security.xml
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Security.Google.xml
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\obj\Debug\SGTE_V1.8.dll
+c:\users\gabriel\documents\visual studio 2013\Projects\SGTE_V1.8\SGTE_V1.8\obj\Debug\SGTE_V1.8.pdb
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\SGTE_V1.8.dll.config
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\SGTE_V1.8.dll
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\SGTE_V1.8.pdb
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Antlr3.Runtime.dll
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\EntityFramework.dll
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\EntityFramework.SqlServer.dll
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.dll
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Security.dll
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Newtonsoft.Json.dll
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Owin.dll
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\System.Web.Helpers.dll
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\System.Web.Mvc.dll
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\System.Web.Optimization.dll
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\System.Web.Razor.dll
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\System.Web.WebPages.dll
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\System.Web.WebPages.Razor.dll
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\WebGrease.dll
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\System.Web.Helpers.xml
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\System.Web.Mvc.xml
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\System.Web.Optimization.xml
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\System.Web.Razor.xml
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\System.Web.WebPages.xml
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\System.Web.WebPages.Razor.xml
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Antlr3.Runtime.pdb
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Newtonsoft.Json.xml
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\EntityFramework.xml
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\EntityFramework.SqlServer.xml
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.xml
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Security.xml
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\obj\Debug\SGTE_V1.8.csprojResolveAssemblyReference.cache
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\obj\Debug\SGTE_V1.8.dll
+C:\Users\Gabriel\Documents\GitHub\SGTE_V1.8\SGTE_V1.8\obj\Debug\SGTE_V1.8.pdb
